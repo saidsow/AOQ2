@@ -149,6 +149,7 @@ svg{
 .hero p {
     font-size: 1.5rem; /* Slightly larger body text in hero */
     line-height: 1.5;
+    color: #FFFFFF;
 }
 
 @keyframes slowscroll {
