@@ -50,8 +50,6 @@ p {
 /* Navbar customization */
 .navbar {
     background-color: var(--tertiary-color);
-    position: fixed;
-    width: 100%;
     top: 0;
 }
 
