@@ -49,9 +49,13 @@ p {
 
 /* Navbar customization */
 .navbar {
-    background-color: var(--tertiary-color);
+    background-color: rgba(47, 47, 47, 0.85); /* Semi-transparent background */
+    position: fixed;
+    width: 100%;
     top: 0;
+    z-index: 10; /* Ensure navbar stays above other elements */
 }
+
 
 .navbar .nav-link {
     font-family: var(--font-family);
@@ -123,9 +127,7 @@ svg{
     font-family: var(--font-family);
     background-image: url("assets/AOQ_1.png");
     background-size: cover; /* Ensures the background image covers the entire container */
-    background-position: center center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    background-attachment: fixed; /* Optional: Makes the background stay fixed during scroll */
+    background-position: center;
     height: 100vh; /* Ensure the section takes up full viewport height */
     width: 100%;
 }
