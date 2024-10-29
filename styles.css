@@ -1,10 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-.roboto-thin {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-  }
   
   .roboto-light {
     font-family: "Roboto", sans-serif;
@@ -14,7 +8,7 @@
   
   .roboto-regular {
     font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
   }
   
@@ -35,73 +29,13 @@
     font-weight: 900;
     font-style: normal;
   }
-  
-  .roboto-thin-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-  .roboto-light-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .roboto-regular-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .roboto-medium-italic {
-    font-family: "Roboto", sans-serif;
+
+body{
+    font-family:"Roboto", sans-serif;
     font-weight: 500;
-    font-style: italic;
-  }
-  
-  .roboto-bold-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  .roboto-black-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-  }
-
-  
-:root {
-    /* Colors */
-    --primary-color: #1F1F1F;    /* Background color */
-    --secondary-color: #FFFFFF;  /* White for text */
-    --accent-color: #D9D9D9;     /* Light gray for buttons, links, or accents */
-    --tertiary-color: #2E2E2E;   /* Dark gray for headers or highlights */
-    --quaternary-color: #363636; /* Slightly lighter gray for subtle elements */
-
-    /* Font */
-    --font-family: 'Roboto'; /* Updated font */
-    --heading-font-weight: 700;  /* For H1, H2, H3 */
-    --subheading-font-weight: 500;  /* For H4, H5, H6 */
-    --body-font-weight: 400;  /* For regular body text */
-    --heading-font-size: 4rem;  /* Larger size for H1, H2, H3 */
-    --subheading-font-size: 2.5rem;  /* Customize H4, H5, H6 */
-    --body-font-size: 1rem;  /* Larger body text size */
-    --default-padding: 16px;
-    --default-margin: 16px;
+    font-style: normal;
 }
-
-/* Body styling */
-body {
-    font-family: var(--font-family);
-    font-size: var(--body-font-size);
-    font-weight: var(--body-font-weight);
-    color: var(--secondary-color);
-    background-color: var(--secondary-color);
-}
-
+  
 /* Hero Section */
 .hero {
     position: relative;
