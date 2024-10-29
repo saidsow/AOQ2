@@ -34,8 +34,30 @@ body{
     font-family:"Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
+    font-size: 1rem;
+    scrollbar-width: smooth;
 }
-  
+.navbar .nav-link {
+  position: relative;
+}
+
+.navbar .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 5%;
+  background-color: #383838;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.navbar .nav-link:hover::before {
+  width: 100%; /* Makes background slide in */
+}
+
 /* Hero Section */
 .hero {
     position: relative;
