@@ -36,6 +36,7 @@ body{
     font-style: normal;
     font-size: 1rem;
     scrollbar-width: smooth;
+    background-color: #333;
 }
 .navbar .nav-link {
   position: relative;
@@ -80,6 +81,7 @@ body{
     position: relative;
     z-index: 1; /* Ensure the text is above the video */
 }
-.box{
-    background-color: red;
+
+.section-2{
+  
 }
