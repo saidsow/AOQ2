@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AOQ</title>
+    <title>AOQ Sports - Empowering Sports Success</title>
+    <meta name="description" content="At AOQ Sports, we empower athletes and brands to reach new heights through tailored representation, innovative strategies, and trusted partnerships. Partner with AOQ to shape future champions and impactful brand collaborations, both within and beyond the arena." />
+    
+    <!-- Fonts and CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <!-- Hero Section -->
-    <section class="hero">
-        <video autoplay muted loop>
+    <section class="hero" aria-labelledby="hero-heading">
+        <video autoplay muted loop class="background-video" aria-hidden="true">
             <source src="assets/Videos/CubeWave_colors.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+
         <nav class="navbar navbar-expand-lg bg-body-transparent fixed-top">
             <div class="container fw-medium opacity-75">
-                <a class="navbar-brand" href="#">
-                    <img src="assets/AOQ_2.png" alt="Logo" height="50px">
+                <a class="navbar-brand" href="#" aria-label="AOQ Sports Homepage">
+                    <img src="assets/AOQ_2.png" alt="AOQ Sports Logo" height="50px">
                     <span class="ms-2 fw-medium">AOQ</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,40 +33,50 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav fs-5">
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
+                            <a class="nav-link" href="#about" aria-label="Learn more about AOQ Sports">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link ms-md-5" href="#careers">Careers</a>
+                            <a class="nav-link ms-md-5" href="#careers" aria-label="Careers with AOQ Sports">Careers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link ms-md-5" href="#highlights">Highlights</a>
+                            <a class="nav-link ms-md-5" href="#highlights" aria-label="AOQ Sports Highlights">Highlights</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="container vh-100 d-flex justify-content-center align-items-center hero-content">
-            <div class="row text-center">
-              <div class="col-md-12">
-                <h1 class="display-1 fw-medium text-shadow">Welcome to Our Website</h1>
-                <p class="fs-1 fw-semibold mt-3">Empowering All for Success</p>
-              </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="section-2">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="spline vh-100">
-                    <spline-viewer url="https://prod.spline.design/Bne0zIU1e58vyzq0/scene.splinecode"></spline-viewer>
+        <div class="container-fluid vh-100 d-flex justify-content-center align-items-center hero-content">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h1 id="hero-heading" class="display-1 fw-medium text-shadow">Welcome to Our Website</h1>
+                    <p class="fs-1 fw-semibold mt-3">Empowering All for Success</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- About Us Section -->
+    <section class="section-2 vh-100 d-flex justify-content-center align-items-center" id="about" aria-labelledby="about-heading">
+        <div class="container-fluid position-relative">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Spline viewer with relative positioning -->
+                    <div class="spline vh-100 position-relative">
+                        <spline-viewer url="https://prod.spline.design/Bne0zIU1e58vyzq0/scene.splinecode"></spline-viewer>
+                    </div>
+                    <!-- Overlay text centered over the Spline viewer -->
+                    <div class="section-2-c position-absolute top-50 start-50 translate-middle text-center">
+                        <p class="fs-2 fw-medium">Empowering elite talent in sports, brands, and business through impactful representation and innovative consultation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS, Spline Viewer, and Custom JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.35/build/spline-viewer.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
-
