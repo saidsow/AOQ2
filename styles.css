@@ -97,11 +97,15 @@ body{
   filter: invert(1);
 }
 
-.card-body {
-  background-color: transparent;
-  border: 0;
-  font-size: 1.5rem;
+.carousel-indicators button {
+  margin: 0 6px; /* Adjusts horizontal spacing between dots */
 }
+
+.card-body {
+  font-size: 1.5rem;
+  height: 14rem;
+}
+
 
 /** Content Section **/
 .content-section {

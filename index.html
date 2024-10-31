@@ -74,18 +74,24 @@
         </div>
     </section>
 
-      <section class="what-we-do-section py-5">
+    <!-- What we do-->
+    <section class="what-we-do-section py-5">
         <div class="container">
             <div class="row mb-4">
                 <div class="col-md-12">
                     <h2 class="text-start fs-1 mb-4">WHAT WE DO</h2>
                 </div>
             </div>
-            <div id="whatWeDoCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="whatWeDoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#whatWeDoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#whatWeDoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#whatWeDoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="d-flex justify-content-center">
-                            <div class="card bg-transparent border-0">
+                            <div class="card bg-transparent shadow-lg">
                                 <div class="card-body">
                                     <h5 class="roboto-bold mb-3">Athlete Representation</h5>
                                     <p class="roboto-regular">Guidance and support tailored to each athlete’s unique goals.</p>
@@ -95,7 +101,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="d-flex justify-content-center">
-                            <div class="card bg-transparent border-0">
+                            <div class="card bg-transparent shadow-lg">
                                 <div class="card-body">
                                     <h5 class="roboto-bold mb-3">Sponsorship & Endorsements</h5>
                                     <p class="roboto-regular">Connecting athletes with brands aligned with their values.</p>
@@ -105,7 +111,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="d-flex justify-content-center">
-                            <div class="card bg-transparent border-0">
+                            <div class="card bg-transparent shadow-lg">
                                 <div class="card-body">
                                     <h5 class="roboto-bold mb-3">Career Development</h5>
                                     <p class="roboto-regular">Long-term planning for sustained success in the industry.</p>
@@ -114,15 +120,11 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#whatWeDoCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#whatWeDoCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
-                </button>
             </div>
         </div>
     </section>
+    
+
     
     <!-- Contact-->
     <section class="content-section py-5">
