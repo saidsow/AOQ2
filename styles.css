@@ -28,11 +28,6 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Section Styling Adjustment */
-.bg-dark {
-    padding-top: 0; /* Remove extra padding */
-    margin-top: 0;  /* Ensure no margin between sections */
-}
 
 /* Navbar */
 .navbar{
@@ -70,7 +65,7 @@ body {
     transition: color 0.3s ease, opacity 0.3s ease;
     background: transparent;
     position: relative;
-    opacity: 0.8;
+    opacity: 0.75;
 }
 
 .accordion-header:hover{
@@ -98,7 +93,7 @@ body {
     opacity: 0;
     overflow: hidden;
     transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
-    padding: 10px 20px; /* Add padding to content */
+    padding: 0 20px; /* Add padding to content */
     transform: translateX(0);
 }
 
@@ -119,7 +114,6 @@ body {
 .accordion-header.active .icon::after {
     content: "-";
 }
-
 /* Mobile View: Disable Right Shift */
 @media (max-width: 768px) {
     .accordion-header.active .title,
