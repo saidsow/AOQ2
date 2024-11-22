@@ -1,64 +1,129 @@
 /* Base Variables */
 :root {
     /* Colors */
-    --color-dark: #222222;          /* Dark black */
-    --color-light: #f5f5f5;         /* Light gray for backgrounds */
-    --color-gray: #7d7d7d;          /* Medium gray for accents */
-    --color-accent: #f0f0f0;        /* Very light gray for text shadows or highlights */
+    --color-dark: #222222; /* Dark black */
+    --color-light: #f5f5f5; /* Light gray for backgrounds */
+    --color-gray: #7d7d7d; /* Medium gray for accents */
+    --color-accent: #f0f0f0; /* Very light gray for text shadows or highlights */
 
     /* Font Sizes */
-    --font-size-hero: 4.5rem;       /* Large font for hero section */
-    --font-size-large: 2.5rem;      /* Large font size for headings */
-    --font-size-medium: 1.125rem;   /* Body text size */
-    --font-size-small: 0.875rem;    /* Small text */
+    --font-size-hero: 4.5rem; /* Large font for hero section */
+    --font-size-large: 2.5rem; /* Large font size for headings */
+    --font-size-medium: 1.125rem; /* Body text size */
+    --font-size-small: 0.875rem; /* Small text */
 
     /* Spacing */
     --padding-base: 1rem;
     --padding-large: 2rem;
 }
 
-html{
-    overflow-x: hidden ;
+/* Global Styling */
+html {
+    overflow-x: hidden;
 }
-/* Global Font Family Setup */
+
 body {
-    font-family:'Courier New', Courier, monospace;
     background-color: var(--color-dark);
     color: var(--color-light);
     scroll-behavior: smooth;
 }
 
-
 /* Navbar */
-.navbar{
-    opacity: 0.8;
-    
+.navbar {
+    opacity: 0.9;
 }
 
-/* Accordion */
-/* Basic Styling */
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-brand {
+    color: white;
+}
+
+/* Parallax Hero Section */
+.parallax {
+    background-image: url('assets/logo/AOQ Logos/AOQ_1.png');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-content {
+    position: relative;
+    bottom: 50%; /* Default for desktop */
+    left: 5%;
+    transform: translateY(25px) translateX(-100px);
+}
+
+.hero-content h1 {
+    font-size: var(--font-size-hero);
+    letter-spacing: 2px;
+}
+
+/* Section-2 (Circle Animation) */
+.section-2 p {
+    font-size: 2.7rem;
+    text-align: center;
+}
+
+.circle-element {
+    position: absolute;
+    width: 300px; /* Adjust size as needed */
+    height: 300px;
+    border-radius: 50%; /* Makes it a circle */
+    border: 2px solid #ffffff; /* Circle border color */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: grow 3s ease-in-out infinite;
+    opacity: 0.7; /* Increase opacity for visibility */
+}
+
+/* Keyframes for Circle Animation */
+@keyframes grow {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.2;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.1;
+    }
+}
+
+/* Accordion Section */
 .accordion {
     width: 80%;
     margin: 20px auto;
 }
 
-.accordion-title{
+.accordion h2 {
+    font-size: 3rem;
+}
+
+.accordion-title {
     padding-left: 0%;
     margin-left: 10%;
 }
 
 .accordion-itm {
-    border-top: 1px solid rgb(255, 255, 255,0.3); /* Add top border to each item */
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 15px;
 }
 
 .accordion-itm:last-child {
-    border-bottom: 1px solid rgb(255, 255, 255,0.3); /* Add bottom border only to the last item */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .accordion-header {
+    margin-top: 15px;
     cursor: pointer;
-    font-size: 1.5rem;
-    padding: 10px 20px; /* Adjust padding for consistent spacing */
+    font-size: 2rem;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,16 +133,15 @@ body {
     opacity: 0.75;
 }
 
-.accordion-header:hover{
+.accordion-header:hover {
     opacity: 1;
 }
-/* Title Styling */
+
 .title {
-    transition: transform 0.5s ease;
     margin-right: 20px;
+    transition: transform 0.5s ease;
 }
 
-/* Icon Styling */
 .icon {
     display: inline-block;
     transition: transform 0.3s ease;
@@ -87,37 +151,115 @@ body {
     content: "+";
 }
 
-/* Content Styling */
 .content {
+    font-size: 1.3rem;
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
-    padding: 0 20px; /* Add padding to content */
+    padding: 0 20px;
     transform: translateX(0);
+    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Active Content */
+/* Active Accordion */
 .content.active {
     max-height: 100px;
     opacity: 1;
     transform: translateX(100px);
 }
 
-/* Active Header Title - only the title shifts */
 .accordion-header.active .title {
     transform: translateX(100px);
     opacity: 1;
 }
 
-/* Icon Toggle when Active */
 .accordion-header.active .icon::after {
     content: "-";
 }
-/* Mobile View: Disable Right Shift */
+
+/* Scrolling Text Section */
+.scrolling-text-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.scrolling-text {
+    position: absolute;
+    white-space: nowrap;
+    animation: scroll-left 80s linear infinite;
+    font-size: 6rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+/* Keyframes for Scrolling Text */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
+    /* Hero Section */
+    .hero-content {
+        bottom: 10%;
+        left: 5%;
+        transform: translateY(30%);
+        text-align: left;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .content{
+        padding: 0px;
+    }
+    /* Accordion Section */
     .accordion-header.active .title,
     .content.active {
-        transform: translateX(0); /* No shift on mobile */
+        transform: translateX(0);
+    }
+
+    .accordion-title,
+    .accordion-itm,
+    .accordion-header {
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .accordion-header {
+        font-size: 2rem;
+    }
+
+    .accordion h2 {
+        font-size: 1.5rem; /* Smaller font size for accordion h2 in mobile view */
+    }
+
+    .content {
+        font-size: 1rem;
+    }
+
+    /* Scrolling Text */
+    .scrolling-text {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .scrolling-text {
+        font-size: 4.5rem;
     }
 }
