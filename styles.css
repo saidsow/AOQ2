@@ -224,6 +224,9 @@ body {
         font-size: 1rem;
     }
 
+    .parallax {
+        background-attachment: scroll; /* Enable smooth scrolling on mobile */
+    }
     .content{
         padding: 0px;
     }
