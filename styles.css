@@ -237,6 +237,9 @@ body {
     }
 
 
+    .parallax{
+        background-image: scroll;
+    }
     .content{
         padding: 0px;
     }
