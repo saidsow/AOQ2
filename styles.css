@@ -39,25 +39,14 @@ body {
 }
 
 .parallax {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.parallax::before {
-    content: '';
-    position: fixed; /* Key to creating the parallax effect */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-image: url('assets/logo/AOQ Logos/AOQ_1.png');
+    height: 100vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: -1; /* Ensure it stays behind the content */
 }
+
 
 
 .hero-content {
@@ -236,10 +225,6 @@ body {
         font-size: 1rem;
     }
 
-
-    .parallax{
-        background-image: scroll;
-    }
     .content{
         padding: 0px;
     }
