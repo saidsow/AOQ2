@@ -48,7 +48,6 @@ body {
 }
 
 
-
 .hero-content {
     position: relative;
     bottom: 50%; /* Default for desktop */
@@ -225,6 +224,9 @@ body {
         font-size: 1rem;
     }
 
+    .parallax {
+        background-attachment: scroll;
+    }
     .content{
         padding: 0px;
     }
