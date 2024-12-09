@@ -208,6 +208,38 @@ body {
     }
 }
 
+/* Highlights Section */
+.card {
+    background-color: var(--color-dark);
+    border: none;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: var(--font-size-large);
+}
+
+.card-text {
+    font-size: var(--font-size-medium);
+}
+
+h2.display-1 {
+    font-size: 6rem;
+    text-align: start;
+}
+
+.special-font {
+    font-family: 'Special Elite', cursive;
+}
+
+.line-font {
+    font-family: 'Monoton', cursive;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     /* Hero Section */
@@ -272,3 +304,4 @@ body {
         font-size: 4.5rem;
     }
 }
+

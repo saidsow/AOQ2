@@ -8,3 +8,4 @@ function toggleAccordion(header) {
         content.style.opacity = content.classList.contains("active") ? "1" : "0.8";
     }
 }
+
