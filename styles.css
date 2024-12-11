@@ -240,6 +240,17 @@ h2.display-1 {
     font-family: 'Monoton', cursive;
 }
 
+/* Additional Styles */
+section.bg-dark {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#agency-content.container {
+    margin-top: 0;
+    padding-top: 0;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     /* Hero Section */
