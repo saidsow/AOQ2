@@ -9,3 +9,14 @@ function toggleAccordion(header) {
     }
 }
 
+fetch('components/navbar.html')
+  .then(response=> response.text())
+  .then(text=> document.getElementById('navbar').innerHTML = text);
+
+  fetch('components/bottom.html')
+  .then(response=> response.text())
+  .then(text=> document.getElementById('bottom').innerHTML = text);
+  
+  fetch('components/footer.html')
+  .then(response=> response.text())
+  .then(text=> document.getElementById('footer').innerHTML = text);
