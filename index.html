@@ -13,94 +13,140 @@
     
     <style>
         .index-page .navbar .nav-link {
-    color: white; /* Color for About page */
-}
+            color: white; /* Color for About page */
+        }
+        .loader-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #050505; /* Background color for loader */
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            opacity: 1;
+            transition: opacity 1.5s ease-out;
+        }
+        .loader-container.fade-out {
+            opacity: 0;
+        }
+        .main-content {
+            display: none; /* Hide main content initially */
+            opacity: 0;
+            transition: opacity 1.5s ease-in;
+        }
+        .main-content.fade-in {
+            display: block;
+            opacity: 1;
+        }
+        .no-scroll {
+            overflow: hidden;
+        }
     </style>
 </head>
-<body>
-   
-    <div class="index-page">
-    <div id="navbar"></div>
+<body class="no-scroll">
+    <!-- Loader Section -->
+    <div class="loader-container">
+        <l-tailspin size="500" stroke="2" speed="3.6" color="white"></l-tailspin>
     </div>
 
-    <!-- Hero Section -->
-    <section class="parallax">
-        <div class="container">
-            <div class="vh-100 d-flex align-items-center justify-content-start text-white hero-content">
-                <div>
-                    <h1 class="fw-bold">Welcome<br> to AOQ</h1>
-                    <p class="lead mt-3 fs-1 fw-semibold">where we take care of you</p>
-                </div>
-            </div>
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="index-page">
+            <div id="navbar"></div>
         </div>
-    </section>
 
-    <!-- Main Theme Section -->
-    <section class="bg-dark text-white p-2">
-        <div class="container">
-            <div class="vh-100 d-flex justify-content-center align-items-center section-2 position-relative text-center p-sm-4">
-                <div class="circle-element"></div>
-                <p>We are here for you at all times</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Accordion Section -->
-    <section class="bg-dark text-white p-2">
-        <div class="container-fluid">
-            <h2 class="accordion-title">Title</h2>
-            <div class="accordion">
-                <div class="accordion-itm">
-                    <h2 class="accordion-header" onclick="toggleAccordion(this)">
-                        <span class="title ms-md-5 text-start"> Item 1</span>
-                        <span class="icon"></span>
-                    </h2>
-                    <div class="content ms-md-5 ">
-                        <p>this is my paragraph</p>
+        <!-- Hero Section -->
+        <section class="parallax">
+            <div class="container">
+                <div class="vh-100 d-flex align-items-center justify-content-start text-white hero-content">
+                    <div>
+                        <h1 class="fw-bold">Welcome<br> to AOQ</h1>
+                        <p class="lead mt-3 fs-1 fw-semibold">where we take care of you</p>
                     </div>
                 </div>
-          
-                <div class="accordion-itm">
-                    <h2 class="accordion-header" onclick="toggleAccordion(this)">
-                        <span class="title ms-md-5 text-start"> Item 2</span>
-                        <span class="icon"></span>
-                    </h2>
-                    <div class="content ms-md-5 ">
-                        <p>this is my paragraph</p>
-                    </div>
-                </div>
-                <div class="accordion-itm">
-                    <h2 class="accordion-header" onclick="toggleAccordion(this)">
-                        <span class="title ms-md-5 text-start"> Item 3</span>
-                        <span class="icon"></span>
-                    </h2>
-                    <div class="content ms-md-5 ">
-                        <p>this is my paragraph</p>
-                    </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Scrolling Text Section -->
-    <section>
-        <div class="scrolling-text-container bg-dark">
+        <!-- Main Theme Section -->
+        <section class="bg-dark text-white p-2">
+            <div class="container">
+                <div class="vh-100 d-flex justify-content-center align-items-center section-2 position-relative text-center p-sm-4">
+                    <div class="circle-element"></div>
+                    <p>We are here for you at all times</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accordion Section -->
+        <section class="bg-dark text-white p-2">
             <div class="container-fluid">
-                <div class="scrolling-text opacity-50 text-uppercase">
-                    <!-- Duplicate the text for seamless scrolling -->
-                    Welcome to AOQ Sports - Empowering Sports Success! Welcome to AOQ Sports - Empowering Sports Success!
+                <h2 class="accordion-title">Title</h2>
+                <div class="accordion">
+                    <div class="accordion-itm">
+                        <h2 class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="title ms-md-5 text-start"> Item 1</span>
+                            <span class="icon"></span>
+                        </h2>
+                        <div class="content ms-md-5 ">
+                            <p>this is my paragraph</p>
+                        </div>
+                    </div>
+              
+                    <div class="accordion-itm">
+                        <h2 class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="title ms-md-5 text-start"> Item 2</span>
+                            <span class="icon"></span>
+                        </h2>
+                        <div class="content ms-md-5 ">
+                            <p>this is my paragraph</p>
+                        </div>
+                    </div>
+                    <div class="accordion-itm">
+                        <h2 class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="title ms-md-5 text-start"> Item 3</span>
+                            <span class="icon"></span>
+                        </h2>
+                        <div class="content ms-md-5 ">
+                            <p>this is my paragraph</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-  
-    <div id="bottom"></div>
-    <!-- Footer Section -->
+        </section>
 
-    <div id="footer"></div>
+        <!-- Scrolling Text Section -->
+        <section>
+            <div class="scrolling-text-container bg-dark">
+                <div class="container-fluid">
+                    <div class="scrolling-text opacity-50 text-uppercase">
+                        <!-- Duplicate the text for seamless scrolling -->
+                        Welcome to AOQ Sports - Empowering Sports Success! Welcome to AOQ Sports - Empowering Sports Success!
+                    </div>
+                </div>
+            </div>
+        </section>
+      
+        <div id="bottom"></div>
+        <!-- Footer Section -->
+        <div id="footer"></div>
+    </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/tailspin.js"></script>
     <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.loader-container').classList.add('fade-out');
+                document.querySelector('.main-content').classList.add('fade-in');
+                setTimeout(function() {
+                    document.querySelector('.loader-container').style.display = 'none';
+                    document.body.classList.remove('no-scroll');
+                }, 1500); // Additional delay for removing loader container
+            }, 2000); // 2 seconds delay
+        });
+
         window.addEventListener('scroll', function() {
             document.body.classList.toggle('scrolled', window.scrollY > 0);
         });
