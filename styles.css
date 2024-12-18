@@ -202,6 +202,13 @@ body {
     letter-spacing: 2px;
     color: #fff;
 }
+.letter-spacing{
+    letter-spacing: 2px;
+}
+
+.box{
+    background-color: red;
+}
 
 /* Keyframes for Scrolling Text */
 @keyframes scroll-left {
