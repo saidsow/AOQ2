@@ -25,7 +25,7 @@
             width: 100%;
             z-index: 1000;
             opacity: 1;
-            transition: opacity 1.5s ease-out;
+            transition: opacity 1s ease-out;
         }
         .loader-container.fade-out {
             opacity: 0;
@@ -41,6 +41,9 @@
         }
         .no-scroll {
             overflow: hidden;
+        }
+        .hero-header{
+            font-size: 4rem;
         }
     </style>
 </head>
@@ -59,10 +62,21 @@
         <!-- Hero Section -->
         <section class="parallax">
             <div class="container">
-                <div class="vh-100 d-flex align-items-center justify-content-start text-white hero-content">
+                <div class="vh-100 d-flex align-items-center justify-content-start text-white hero-content ">
                     <div>
-                        <h1 class="fw-bold">Welcome<br> to AOQ</h1>
-                        <p class="lead mt-3 fs-1 fw-semibold">where we take care of you</p>
+                        <h1 class="fw-bold letter-spacing hero-header fade-in-text">
+                            <span>Welcome</span><br>
+                            <span>to</span>
+                            <span>AOQ</span>
+                        </h1>
+                        <p class="lead mt-3 fs-1 fw-semibold fade-in-text">
+                            <span>where</span>
+                            <span>we</span>
+                            <span>take</span>
+                            <span>care</span>
+                            <span>of</span>
+                            <span>you</span>
+                        </p>
                     </div>
                 </div>
             </div>
