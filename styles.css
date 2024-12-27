@@ -52,6 +52,13 @@ body {
     background-size: cover;
 }
 
+.vh-200 {
+    height: 200vh; /* Twice the viewport height */
+}
+.sticky-text {
+    position: sticky;
+    top: 0; /* Adjust to keep it fixed at the top */
+}
 
 .hero-content {
     position: relative;
@@ -271,7 +278,7 @@ body {
 @keyframes fadeInFromBottom {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(1000px);
     }
     100% {
         opacity: 1;
@@ -281,6 +288,17 @@ body {
 
 .fade-in-from-bottom {
     animation: fadeInFromBottom 2s ease-out forwards;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* Moves to the original position */
 }
 
 

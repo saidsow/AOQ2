@@ -27,9 +27,16 @@
             opacity: 1;
             transition: opacity 1s ease-out;
         }
+        
         .loader-container.fade-out {
             opacity: 0;
         }
+        @media (max-width: 768px) {
+            .custom-spinner {
+                transform: scale(0.7); /* Shrinks it to 50% of its size */
+            }
+        }
+        
         .main-content {
             display: none; /* Hide main content initially */
             opacity: 0;
@@ -50,14 +57,15 @@
 <body class="no-scroll">
     <!-- Loader Section -->
     <div class="loader-container">
-        <l-tailspin size="500" stroke="2" speed="3.6" color="white"></l-tailspin>
+        <l-tailspin class="custom-spinner" size="500" stroke="2" speed="3.6" color="white"></l-tailspin>
     </div>
 
     <!-- Main Content -->
     <div class="main-content">
-        <div class="index-page">
+        <div class="">
             <div id="navbar"></div>
         </div>
+        
 
         <!-- Hero Section -->
         <section class="parallax">

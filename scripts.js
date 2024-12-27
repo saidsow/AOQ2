@@ -45,3 +45,21 @@ fetch('components/footer.html')
 window.addEventListener('scroll', function () {
     document.body.classList.toggle('scrolled', window.scrollY > 0);
 });
+
+// in view animation script
+document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible"); // Add visible class
+                    observer.unobserve(entry.target); // Stop observing
+                }
+            });
+        },
+        { threshold: 0.1 } // Trigger when 10% of the element is visible
+    );
+
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el)); // Observe each hidden element
+});

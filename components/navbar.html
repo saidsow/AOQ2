@@ -1,25 +1,36 @@
-<nav class="navbar navbar-expand-lg navbar-light z-1 position-absolute w-100 fade-in-from-top">
+<nav class="navbar navbar-expand-lg navbar-dark z-1 position-absolute w-100 fade-in-from-top">
     <div class="container">
-        <a href="index.html" class="navbar-brand fw-semibold">
-            <img src="assets/logo/AOQ Logos/AOQ_2.png" height="50px" alt="">
+        <!-- Brand -->
+        <a class="navbar-brand fw-semibold" href="index.html">
+            <img src="assets/logo/AOQ Logos/AOQ_2.png" height="50px" alt="AOQ Logo">
             <span>AOQ</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+        <!-- Toggler Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="highlights.html" class="nav-link">Highlights</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
-            </ul>
+
+        <!-- Offcanvas Menu -->
+        <div class="offcanvas offcanvas-start bg-dark vh-100" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">AOQ Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <!-- Navbar Links -->
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="highlights.html">Highlights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>
-
