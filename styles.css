@@ -308,6 +308,9 @@ body {
     animation: fadeIn 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
+.font-size-change{
+    font-size: 2.5rem;
+}
 /* Delay each span based on its index */
 .fade-in-text span:nth-child(1) { animation-delay: 0s; }
 .fade-in-text span:nth-child(2) { animation-delay: 0.2s; }
@@ -388,10 +391,15 @@ body {
     .scrolling-text {
         font-size: 3rem;
     }
+    .font-size-change{
+        font-size: 1.5rem;
+    }
 }
+
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .scrolling-text {
         font-size: 4.5rem;
     }
 }
+
